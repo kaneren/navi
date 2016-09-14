@@ -19,12 +19,26 @@
 				background-size: cover;
 			}
 			
+			.head {
+				color: gold;
+				text-align: center;
+			}
+			
 			p {
 				font-size: 1.3em;
 			}
 			
 			p a {
 				color: gold;
+				font-size: inherit;
+				text-decoration: none;
+				transition: color 2s, font-size 2s;
+			}
+			
+			p a:hover {
+				color: yellow;
+				text-decoration: none;
+				font-size: 1.5em;
 			}
 		</style>
 
@@ -44,14 +58,18 @@
 	<body>
 		<div class="container" style="color: white;">
 
-			<div class="page-header" style="color: gold;"><h1 class="text-center">关于</h1></div>
-
+			<br />
+			<div class="head">
+				<h1>关于</h1></div>
+			<hr />
 			<p>本导航网页始建于 2016 年 8月 初，初步完成于 8月 3 日。详细搭建过程见
 				<a href="http://rrkaige.com/2016/08/03/%E6%88%91%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%AF%BC%E8%88%AA%E7%BD%91%E9%A1%B5/">我的个人导航网页</a>。
 			</p>
 			<p>本站基于
 				<a href="http://zh.wikipedia.org/wiki/Html5">HTML5</a>技术，
-				<a href="http://getbootstrap.com/">Bootstrap</a>技术构建。</p>
+				<a href="http://getbootstrap.com/">Bootstrap</a>技术，
+				<a href="https://zh.wikipedia.org/wiki/%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8#CSS3">CSS3</a>技术构建。
+			</p>
 
 			<hr />
 			<h3 style="color: gold; text-align: center;">V1.0</h3>
@@ -88,7 +106,11 @@
 				<a href="http://ob0mgqhy4.bkt.clouddn.com/20160908-navi5.png">主页面效果</a>，
 				<a href="http://ob0mgqhy4.bkt.clouddn.com/20160908-navi6.png">关于页面效果</a>
 			</p>
-			<p>2016/09/12，添加搜索框和链接栏背景透明度鼠标悬浮变化事件</p>
+			<p>2016/09/12，添加搜索框和链接栏背景透明度鼠标悬浮变化效果</p>
+			<p>
+				2016/09/14，添加文字、容器的阴影效果，文字、鼠标悬浮的过渡效果，页面小修改，
+				<a href="http://ob0mgqhy4.bkt.clouddn.com/20160914-navi7.png">主页面效果</a>
+			</p>
 
 		</div>
 		<!-- /.container -->

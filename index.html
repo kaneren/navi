@@ -20,22 +20,43 @@
 			}
 			
 			#search {
-				opacity: 0.5;
+				background-color: rgba(245, 245, 245, 0.5);
 				type: text;
+				transition: background-color 1s;
 			}
 			
 			#search:hover {
-				opacity: 0.9;
+				background-color: rgba(245, 245, 245, 0.9);
 			}
 			
 			#hyperlink {
-				opacity: 0.5;
-				font-size: 1.3em;
-				line-height: 2em;
+				background-color: rgba(245, 245, 245, 0.5);
+				box-shadow: 0 4px 8px rgba(255, 255, 0, 0.2), 0 6px 20px rgba(255, 255, 0, 0.19);
+				transition: background-color 2s;
 			}
 			
 			#hyperlink:hover {
-				opacity: 0.9;
+				background-color: rgba(245, 245, 245, 0.9);
+			}
+			
+			#hyperlink a {
+				background-color: inherit;
+				color: black;
+				font-size: 1.3em;
+				line-height: 2em;
+				text-decoration: none;
+				transition: background-color 1s;
+			}
+			
+			#hyperlink a:hover {
+				background-color: rgb(105, 105, 105);
+				color: rgb(245, 245, 245);
+			}
+			
+			.head {
+				color: gold;
+				text-align: center;
+				text-shadow: 2px 2px 10px #FF0000;
 			}
 			
 			.left {
@@ -58,20 +79,19 @@
 			}
 			
 			.foot {
-				text-align: center;
 				color: gold;
+				text-align: center;
 			}
 			
-			.foot a:link {
+			.foot a {
 				color: orange;
-			}
-			
-			.foot a:visited {
-				color: orange;
+				text-decoration: none;
+				transition: color 1s;
 			}
 			
 			.foot a:hover {
 				color: yellow;
+				text-decoration: none;
 			}
 		</style>
 
@@ -90,9 +110,12 @@
 
 	<body>
 		<div class="container">
+			<br />
 			<!-- Motto -->
-			<div class="page-header" style="color: gold;">
-				<h1 class="text-center">只为，更好的自己</h1></div>
+			<div class="head">
+				<h1>只为，更好的自己</h1>
+			</div>
+			<br />
 			<!-- BodyClock -->
 			<div class="left">
 				<script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js"></script>
@@ -102,7 +125,7 @@
 				<iframe width="420" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=3"></iframe>
 			</div>
 			<!-- GoogleSearch -->
-			<hr style="clear:both;" />
+			<br style="clear:both;" /><br />
 			<form method="get" action="https://www.google.com/search">
 				<div class="form-group">
 					<div class="input-group">
@@ -111,8 +134,8 @@
 					</div>
 				</div>
 			</form>
+			<br />
 			<!-- BaiduSearch -->
-			<hr />
 			<form action="https://www.baidu.com/baidu">
 				<div class="form-group">
 					<div class="input-group">
@@ -121,8 +144,8 @@
 					</div>
 				</div>
 			</form>
+			<br />
 			<!-- Hyperlink -->
-			<hr />
 			<div id="hyperlink" class="panel panel-default">
 				<div class="panel-body">
 					<div class="row">
@@ -170,7 +193,7 @@
 					</div>
 				</div>
 			</div>
-
+			<br />
 			<div id="hyperlink" class="panel panel-default">
 				<div class="panel-body">
 					<div class="row">
@@ -196,9 +219,9 @@
 			<div class="ip">
 				<script type="text/javascript" src="http://ip.chinaz.com/getip.aspx"></script>
 			</div>
-			<!-- Direction -->
 			<br /><br />
-			<hr style="clear: both;" />
+			<br style="clear: both;" />
+			<!-- Direction -->
 			<div class="foot">
 				<p>
 					<a href="https://github.com/kaneren/navi"><i class="fa fa-github-square fa-lg"></i></a>
