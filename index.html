@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<html>
+	<html lang="zh-CN">
 
 	<head>
 		<meta charset="utf-8" />
@@ -15,8 +15,22 @@
 
 		<style>
 			body {
-				background-image: url("http://ob0mgqhy4.bkt.clouddn.com/20160908-navi-background.png");
+				background-image: url(img/background.png);
 				background-size: cover;
+			}
+			
+			.container {
+				display: table;
+				height: 100%;
+			}
+			
+			.row {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			
+			.row-centered {
+				text-align: center;
 			}
 			
 			#search {
@@ -54,37 +68,13 @@
 				color: rgb(245, 245, 245);
 			}
 			
-			.head {
-				color: gold;
-				text-align: center;
-				text-shadow: 2px 2px 10px #FF0000;
-			}
-			
-			.left {
-				float: left;
-				margin: 5px;
-				padding: 5px;
-			}
-			
-			.right {
-				float: right;
-				margin: 5px;
-				padding: 5px;
-			}
-			
-			.ip {
-				float: right;
-				color: gold;
-				margin: 5px;
-				padding: 5px;
-			}
-			
 			.foot {
 				color: gold;
 				text-align: center;
 			}
 			
-			.foot a:link, .foot a:visited {
+			.foot a:link,
+			.foot a:visited {
 				color: orange;
 				text-decoration: none;
 				transition: color 2s, font-size 2s;
@@ -112,116 +102,82 @@
 
 	<body>
 		<div class="container">
-			<br />
-			<!-- Motto -->
-			<div class="head">
-				<h1>只为，更好的自己</h1>
-			</div>
-			<br />
-			<!-- BodyClock -->
-			<div class="left">
-				<script type="text/javascript" charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_tr.js"></script>
-			</div>
-			<!-- Weather -->
-			<div class="right">
-				<iframe width="420" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=3"></iframe>
-			</div>
-			<!-- GoogleSearch -->
-			<br style="clear:both;" /><br />
-			<form method="get" action="https://www.google.com/search">
-				<div class="form-group">
-					<div class="input-group">
-						<div class="input-group-addon"><i class="fa fa-google fa-lg"></i></div>
-						<input id="search" class="form-control input-lg" name="q" maxlength="255" onmouseover="this.focus()" onfocus="this.select()" autofocus="autofocus" />
+			<div class="row row-centered">
+				<!-- GoogleSearch -->
+				<form method="get" action="https://www.google.com/search">
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-addon"><i class="fa fa-google fa-lg"></i></div>
+							<input id="search" class="form-control input-lg" name="q" maxlength="255" onmouseover="this.focus()" onfocus="this.select()" autofocus="autofocus" />
+						</div>
+					</div>
+				</form>
+				<br />
+				<!-- BaiduSearch -->
+				<form action="https://www.baidu.com/baidu">
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-addon"><i class="fa fa-bold fa-lg"></i></div>
+							<input id="search" class="form-control input-lg" name="wd" onmouseover="this.focus()" onfocus="this.select()" />
+						</div>
+					</div>
+				</form>
+				<br />
+				<!-- Hyperlink -->
+				<div id="hyperlink" class="panel panel-default">
+					<div class="panel-body">
+						<div class="row">
+
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://github.com/">
+								<i class="fa fa-github" style="color: black;"></i> GitHub
+							</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://gitee.com/">
+								<i class="fa fa-rss" style="color: black;"></i> Gitee
+							</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://leetcode.com/">
+								<i class="fa fa-file-code-o" style="color: black;"></i> LeetCode
+							</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://stackoverflow.com/">
+								<i class="fa fa-stack-overflow" style="color: black;"></i> StackOverFlow
+							</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://accounts.google.com/">
+								<i class="fa fa-envelope" style="color: black;"></i> Gmail
+							</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://email.163.com/">
+								<i class="fa fa-envelope-o" style="color: black;"></i> 网易邮箱
+							</a>
+
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://www.w3schools.com/">w3schools</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://www.coursera.org">Coursera</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://www.codeproject.com/">CodeProject</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://news.ycombinator.com/">HackerNews</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://www.google.cn/maps/">GoogleMap</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://fanyi.baidu.com">百度翻译</a>
+
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://mp.weixin.qq.com/">公众平台</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://study.163.com/">网易云课堂</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://www.jd.com/">京东</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://www.suning.com/">苏宁易购</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://www.mi.com/">小米</a>
+							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://www.soharp.com/">蓝调口琴网</a>
+
+						</div>
 					</div>
 				</div>
-			</form>
-			<br />
-			<!-- BaiduSearch -->
-			<form action="https://www.baidu.com/baidu">
-				<div class="form-group">
-					<div class="input-group">
-						<div class="input-group-addon"><i class="fa fa-bold fa-lg"></i></div>
-						<input id="search" class="form-control input-lg" name="wd" onmouseover="this.focus()" onfocus="this.select()" />
-					</div>
-				</div>
-			</form>
-			<br />
-			<!-- Hyperlink -->
-			<div id="hyperlink" class="panel panel-default">
-				<div class="panel-body">
-					<div class="row">
-
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://rrkaige.com/">
-							<i class="fa fa-rss" style="color: black;"></i> MyBlog
-						</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://github.com/">
-							<i class="fa fa-github" style="color: black;"></i> GitHub
-						</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://leetcode.com/">
-							<i class="fa fa-file-code-o" style="color: black;"></i> LeetCode
-						</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://stackoverflow.com/">
-							<i class="fa fa-stack-overflow" style="color: black;"></i> StackOverFlow
-						</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://accounts.google.com/">
-							<i class="fa fa-envelope" style="color: black;"></i> Gmail
-						</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://email.163.com/">
-							<i class="fa fa-envelope-o" style="color: black;"></i> 网易邮箱
-						</a>
-
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://www.w3schools.com/">w3schools</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://www.coursera.org">Coursera</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://www.codeproject.com/">CodeProject</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://news.ycombinator.com/">HackerNews</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://www.google.cn/maps/">GoogleMap</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://fanyi.baidu.com">百度翻译</a>
-
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://mp.weixin.qq.com/">公众号</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://study.163.com/">网易云课堂</a>						
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://support.mozilla.org/zh-CN/localization">SUMO</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://www.nowcoder.com/">牛客网</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://mooc.guokr.com/">MOOC学院</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://portal.qiniu.com/signin">七牛云</a>
-
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://www.taobao.com/">淘宝</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://www.tmall.com/">天猫</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://www.jd.com/">京东</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://you.163.com/">网易严选</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://www.suning.com/">苏宁易购</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://www.dangdang.com/">当当</a>
-
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://www.10086.cn/js">江苏移动</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://www.mi.com/">小米</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://music.163.com/">网易云音乐</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="http://www.soharp.com/">蓝调口琴网</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://sg.godaddy.com/zh?isc=gofdc196&ci=">GoDaddy</a>
-						<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://www.yuntiweb.com/">云梯</a>
-
-					</div>
+				<!-- Direction -->
+				<div class="foot">
+					<p>
+						<a href="https://github.com/kaneren/navi"><i class="fa fa-github-square fa-lg"></i></a>
+						| <strong>&copy; 2016 <i class="fa fa-heart" style="color: red;"></i> Kane Ren</strong> |
+						<a href="about.html">关于</a>
+					</p>
+					<p>
+						要获得最佳使用体验，请使用
+						<a rel="browser" href="http://browsehappy.com/">最新版本浏览器</a>访问本站。 本作品采用
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+					</p>
 				</div>
 			</div>
-			<!-- IPtest -->
-			<div class="ip">
-				<script type="text/javascript" src="http://ip.chinaz.com/getip.aspx"></script>
-			</div>
-			<br /><br />
-			<br style="clear: both;" />
-			<!-- Direction -->
-			<div class="foot">
-				<p>
-					<a href="https://github.com/kaneren/navi"><i class="fa fa-github-square fa-lg"></i></a>
-					| <strong>&copy; 2016 <i class="fa fa-heart" style="color: red;"></i> Kane Ren</strong> |
-					<a href="about.html">关于</a>
-				</p>
-				<p>
-					要获得最佳使用体验，请使用
-					<a rel="browser" href="http://browsehappy.com/">最新版本浏览器</a>访问本站。 本作品采用
-					<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
-				</p>
-			</div>
-
 		</div>
 		<!-- /.container -->
 
@@ -232,4 +188,4 @@
 
 	</body>
 
-</html>
+	</html>
