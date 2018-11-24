@@ -108,7 +108,27 @@
 					<div class="form-group">
 						<div class="input-group">
 							<div class="input-group-addon"><i class="fa fa-google fa-lg"></i></div>
-							<input id="search" class="form-control input-lg" name="q" maxlength="255" onmouseover="this.focus()" onfocus="this.select()" autofocus="autofocus" />
+							<input id="search" class="form-control input-lg" name="q" maxlength="255" onmouseover="this.focus()" onfocus="this.select()" />
+						</div>
+					</div>
+				</form>
+				<br />
+				<!-- StartpageSearch -->
+				<form method="post" action="https://www.startpage.com/do/search">
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-addon"><i class="fa fa-scribd fa-lg"></i></div>
+							<input id="search" class="form-control input-lg" name="query" maxlength="255" onmouseover="this.focus()" onfocus="this.select()" />
+						</div>
+					</div>
+				</form>
+				<br />
+				<!-- BingSearch -->
+				<form method="get" action="https://cn.bing.com/search">
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-addon"><i class="fa fa-bold fa-lg"></i></div>
+							<input id="search" class="form-control input-lg" name="q" maxlength="255" onmouseover="this.focus()" onfocus="this.select()" />
 						</div>
 					</div>
 				</form>
@@ -118,7 +138,7 @@
 					<div class="form-group">
 						<div class="input-group">
 							<div class="input-group-addon"><i class="fa fa-bold fa-lg"></i></div>
-							<input id="search" class="form-control input-lg" name="wd" onmouseover="this.focus()" onfocus="this.select()" />
+							<input id="search" class="form-control input-lg" name="wd" maxlength="255" onmouseover="this.focus()" onfocus="this.select()" autofocus="autofocus" />
 						</div>
 					</div>
 				</form>
@@ -132,7 +152,7 @@
 								<i class="fa fa-github" style="color: black;"></i> GitHub
 							</a>
 							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://gitee.com/">
-								<i class="fa fa-rss" style="color: black;"></i> Gitee
+								<i class="fa fa-git" style="color: black;"></i> Gitee
 							</a>
 							<a class="col-xs-6 col-sm-4 col-md-3 col-lg-2" href="https://leetcode.com/">
 								<i class="fa fa-file-code-o" style="color: black;"></i> LeetCode
